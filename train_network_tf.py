@@ -43,7 +43,7 @@ labelNames = ["airplane", "automobile", "bird", "cat", "deer",
 # initialize the initial learning rate, total number of epochs to
 # train for, and batch size
 INIT_LR = 0.01
-EPOCHS = 1
+EPOCHS = 300
 BS = 32
 
 # initialize the optimizer and model
@@ -72,9 +72,9 @@ plt.plot(np.arange(0, EPOCHS), H.history["loss"], label="train_loss")
 plt.plot(np.arange(0, EPOCHS), H.history["val_loss"], label="val_loss")
 plt.plot(np.arange(0, EPOCHS), H.history["acc"], label="train_acc")
 plt.plot(np.arange(0, EPOCHS), H.history["val_acc"], label="val_acc")
-plt.title("Training Loss and Accuracy on Dataset")
-plt.xlabel("Epoch #")
-plt.ylabel("Loss/Accuracy")
+plt.title("Training Loss e Acurácia")
+plt.xlabel("Epoca #")
+plt.ylabel("Loss/Acurácia")
 plt.legend(loc="lower left")
 plt.savefig(args["plot"])
 
