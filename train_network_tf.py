@@ -14,6 +14,8 @@ import matplotlib.pyplot as plt
 import tensorflow as tf
 import numpy as np
 import argparse
+import pickle
+
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
@@ -41,7 +43,7 @@ labelNames = ["airplane", "automobile", "bird", "cat", "deer",
 # initialize the initial learning rate, total number of epochs to
 # train for, and batch size
 INIT_LR = 0.01
-EPOCHS = 300
+EPOCHS = 1
 BS = 32
 
 # initialize the optimizer and model
@@ -75,3 +77,11 @@ plt.xlabel("Epoch #")
 plt.ylabel("Loss/Accuracy")
 plt.legend(loc="lower left")
 plt.savefig(args["plot"])
+
+
+# save the model and label binarizer to disk
+print("[INFO] serializing network and label binarizer...")
+model.save("output/tf_vgg.model")
+f = open("output/tf_vgg.pickle", "wb")
+f.write(pickle.dumps(lb))
+f.close()
