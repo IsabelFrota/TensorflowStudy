@@ -43,7 +43,7 @@ labelNames = ["airplane", "automobile", "bird", "cat", "deer",
 # initialize the initial learning rate, total number of epochs to
 # train for, and batch size
 INIT_LR = 0.01
-EPOCHS = 1
+EPOCHS = 300
 BS = 32
 
 # initialize the optimizer and model
