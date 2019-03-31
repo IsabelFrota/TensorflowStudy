@@ -86,7 +86,7 @@ model = SmallVGGNet.build(width=64, height=64, depth=3,
 # initialize our initial learning rate, # of epochs to train for,
 # and batch size
 INIT_LR = 0.01
-EPOCHS = 75
+EPOCHS = 300
 BS = 32
 
 # initialize the model and optimizer (you'll want to use
@@ -115,9 +115,9 @@ plt.plot(N, H.history["loss"], label="train_loss")
 plt.plot(N, H.history["val_loss"], label="val_loss")
 plt.plot(N, H.history["acc"], label="train_acc")
 plt.plot(N, H.history["val_acc"], label="val_acc")
-plt.title("Training Loss and Accuracy (SmallVGGNet)")
-plt.xlabel("Epoch #")
-plt.ylabel("Loss/Accuracy")
+plt.title("Training Loss e Acurácia (SmallVGGNet)")
+plt.xlabel("Epoca #")
+plt.ylabel("Loss/Acurácia")
 plt.legend()
 plt.savefig(args["plot"])
 
